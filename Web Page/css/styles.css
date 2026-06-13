@@ -80,7 +80,7 @@ nav {
 .nav-brand {
   font-family: var(--font-mono); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em;
 }
-.nav-brand span { color: var(--green); }
+.nav-brand img { height: 28px; width: auto;border-radius: 50px; margin-left:-2rem; margin-right: 0.5rem; cursor: pointer;}
 
 .nav-right { display: flex; align-items: center; gap: 1.5rem; }
 .nav-links { display: flex; gap: 1.4rem; list-style: none; }
