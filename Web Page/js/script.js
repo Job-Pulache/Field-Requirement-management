@@ -118,8 +118,8 @@ function animCount(el) {
 
 /* ─── VISUAL SCREEN ENGINE LIGHTBOX ─── */
 function openLightbox(type) {
-  document.getElementById('lb-img').src = type === 'as-is' ? 'requirement-process-as-is.png' : 'requirement-process-to-be.png';
+  document.getElementById('lb-img').src = type === 'as-is' ? '../img/Requirement_Process_AS-IS.png' : '../img/Requirement_Process_To-BE.png';
   document.getElementById('lightbox').classList.add('open');
 }
 function closeLightbox() { document.getElementById('lightbox').classList.remove('open'); }
-document.addEventListener('keydown', e => { if(e.key === 'Escape') closeLightbox(); });
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeLightbox(); }); 
