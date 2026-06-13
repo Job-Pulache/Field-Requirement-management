@@ -1,331 +1,464 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Requirement Process Management — RPMS</title>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<link rel="icon" href="../img/logo/logo.png" type="image/png"/>
-<link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Requirement Process Management — RPMS</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <link rel="icon" href="../img/logo/logo.png" type="image/png" />
+  <link rel="stylesheet" href="css/styles.css">
 
 </head>
+
 <body data-theme="light">
 
-<nav>
-  <div class="nav-brand">RPMS <span>·</span> Purafruit</div>
-  <div class="nav-right">
-    <ul class="nav-links">
-      <li><a href="#problem" data-en="Problem" data-es="Problema">Problem</a></li>
-      <li><a href="#process" data-en="Process" data-es="Proceso">Process</a></li>
-      <li><a href="#kpis" data-en="KPIs" data-es="KPIs">KPIs</a></li>
-      <li><a href="#improvements" data-en="Improvements" data-es="Mejoras">Improvements</a></li>
-      <li><a href="#tools" data-en="Tools" data-es="Herramientas">Tools</a></li>
-    </ul>
-    <div class="lang-wrap">
-      <button class="lang-btn active" onclick="setLang('en')">EN</button>
-      <button class="lang-btn" onclick="setLang('es')">ES</button>
-    </div>
-    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">◐</button>
-  </div>
-</nav>
-
-<div class="canvas">
-
-  <section class="hero flow-section">
-    <div class="start-event"><span class="start-event-icon">START</span></div>
-    <div class="sec-mono" data-en="Process · Agro-Export Sector · PuraFruit Co." data-es="Proceso · Sector Agroexportador · PuraFruit Co.">Process · Agro-Export Sector · PuraFruit Co.</div>
-    <h1 data-en="Requirement<br/><em>Process</em><br/>Management" data-es="Gestión de<br/><em>Procesos</em><br/>de Requerimientos">Requirement<br/><em>Process</em><br/>Management</h1>
-    <p class="sec-desc" data-en="A full process analysis project — AS-IS mapping, TO-BE redesign, KPI dashboards and continuous improvement proposals." data-es="Proyecto completo de análisis de procesos — mapeo AS-IS, rediseño TO-BE, dashboards de KPIs y propuestas de mejora continua.">A full process analysis project — AS-IS mapping, TO-BE redesign, KPI dashboards and continuous improvement proposals.</p>
-    <div class="hero-chips">
-      <span class="chip pill">Bizagi BPMN 2.0</span>
-      <span class="chip pill">Excel Advanced</span>
-      <span class="chip pill">Power BI</span>
-      <span class="chip pill">KPI Analysis</span>
-      <span class="chip pill">Continuous Improvement</span>
-    </div>
-  </section>
-
-  <div class="flow-connector"><div class="flow-connector-dot"></div></div>
-
-  <section class="flow-section" id="problem">
-    <div class="sec-header">
-      <div class="sec-mono" data-en="01 · GATEWAY — Issue Detection" data-es="01 · GATEWAY — Detección de Problemas">01 · GATEWAY — Issue Detection</div>
-      <h2 class="sec-title reveal" data-en="What was broken?" data-es="¿Qué fallaba?">What was broken?</h2>
-      <p class="sec-desc reveal" data-en="The current process revealed 4 critical failures when mapped. Each became a decision point that blocked operational efficiency." data-es="El proceso actual reveló 4 fallas críticas al ser mapeado. Cada una se convirtió en un punto de decisión que bloqueaba la eficiencia operativa.">The current process revealed 4 critical failures when mapped. Each became a decision point that blocked operational efficiency.</p>
-    </div>
-
-    <div class="gateway-container reveal">
-      <div class="gateway-diamond">
-        <div class="gateway-diamond-inner" data-en="Issues<br/>Found?" data-es="¿Fallos<br/>Detectados?">Issues<br/>Found?</div>
+  <nav>
+    <div class="nav-brand">RPMS <span>·</span> Purafruit</div>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#problem" data-en="Problem" data-es="Problema">Problem</a></li>
+        <li><a href="#process" data-en="Process" data-es="Proceso">Process</a></li>
+        <li><a href="#kpis" data-en="KPIs" data-es="KPIs">KPIs</a></li>
+        <li><a href="#improvements" data-en="Improvements" data-es="Mejoras">Improvements</a></li>
+        <li><a href="#tools" data-en="Tools" data-es="Herramientas">Tools</a></li>
+      </ul>
+      <div class="lang-wrap">
+        <button class="lang-btn active" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" onclick="setLang('es')">ES</button>
       </div>
-      <div style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--amber); font-weight: 600; margin-top: 0.8rem; letter-spacing: 0.05em;" data-en="YES — 4 paths detected" data-es="SÍ — 4 rutas detectadas">YES — 4 paths detected</div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">◐</button>
+    </div>
+  </nav>
+
+  <div class="canvas">
+
+    <section class="hero flow-section">
+      <div class="start-event"><span class="start-event-icon">START</span></div>
+      <div class="sec-mono" data-en="Process · Agro-Export Sector · PuraFruit Co."
+        data-es="Proceso · Sector Agroexportador · PuraFruit Co.">Process · Agro-Export Sector · PuraFruit Co.</div>
+      <h1 data-en="Requirement<br/><em>Process</em><br/>Management"
+        data-es="Gestión de<br/><em>Procesos</em><br/>de Requerimientos">
+        Requirement<br /><em>Process</em><br />Management</h1>
+      <p class="sec-desc"
+        data-en="A full process analysis project — AS-IS mapping, TO-BE redesign, KPI dashboards and continuous improvement proposals."
+        data-es="Proyecto completo de análisis de procesos — mapeo AS-IS, rediseño TO-BE, dashboards de KPIs y propuestas de mejora continua.">
+        A full process analysis project — AS-IS mapping, TO-BE redesign, KPI dashboards and continuous improvement
+        proposals.</p>
+      <div class="hero-chips">
+        <span class="chip pill">Bizagi BPMN 2.0</span>
+        <span class="chip pill">Excel Advanced</span>
+        <span class="chip pill">Power BI</span>
+        <span class="chip pill">KPI Analysis</span>
+        <span class="chip pill">Continuous Improvement</span>
+      </div>
+    </section>
+
+    <div class="flow-connector">
+      <div class="flow-connector-dot"></div>
     </div>
 
-    <div class="node-grid reveal">
-      <div class="diagram-box node-card">
-        <div class="node-meta"><span>node_01</span><span>fail_path</span></div>
-        <h3 data-en="No Digital Record" data-es="Sin Registro Digital">No Digital Record</h3>
-        <p data-en="Requests were made verbally or on handwritten forms — impossible to track status or history." data-es="Las solicitudes se hacían verbalmente o en formularios escritos — imposible rastrear estado o historial.">Requests were made verbally or on handwritten forms — impossible to track status or history.</p>
-      </div>
-      <div class="diagram-box node-card">
-        <div class="node-meta"><span>node_02</span><span>fail_path</span></div>
-        <h3 data-en="No Approval SLA" data-es="Sin SLA de Aprobación">No Approval SLA</h3>
-        <p data-en="No defined maximum response time — causing delays that impacted field operations every campaign." data-es="Sin tiempo máximo de respuesta definido — causando demoras que impactaban las operaciones de campo.">No defined maximum response time — causing delays that impacted field operations every campaign.</p>
-      </div>
-      <div class="diagram-box node-card">
-        <div class="node-meta"><span>node_03</span><span>fail_path</span></div>
-        <h3 data-en="No Rejection Log" data-es="Sin Registro de Rechazos">No Rejection Log</h3>
-        <p data-en="Rejection reasons were never documented — the same issues repeated every cycle without resolution." data-es="Los motivos de rechazo nunca se documentaban — los mismos problemas se repetían cada ciclo.">Rejection reasons were never documented — the same issues repeated every cycle without resolution.</p>
-      </div>
-      <div class="diagram-box node-card">
-        <div class="node-meta"><span>node_04</span><span>fail_path</span></div>
-        <h3 data-en="No Logistics Visibility" data-es="Sin Visibilidad en Logística">No Logistics Visibility</h3>
-        <p data-en="Logistics only learned of approvals via physical notification — creating last-minute bottlenecks." data-es="Logística solo se enteraba de las aprobaciones físicamente — creando cuellos de botella de último minuto.">Logistics only learned of approvals via physical notification — creating last-minute bottlenecks.</p>
-      </div>
-    </div>
-  </section>
-
-  <div class="flow-connector"><div class="flow-connector-dot"></div></div>
-
-  <section class="flow-section" id="process">
-    <div class="sec-header">
-      <div class="sec-mono" data-en="02 · SUBPROCESS — BPMN Modeling" data-es="02 · SUBPROCESS — Modelado BPMN">02 · SUBPROCESS — BPMN Modeling</div>
-      <h2 class="sec-title reveal" data-en="AS-IS  ↔  TO-BE" data-es="AS-IS  ↔  TO-BE">AS-IS  ↔  TO-BE</h2>
-      <p class="sec-desc reveal" data-en="Both processes modeled in BPMN 2.0 with Bizagi Modeler across 4 lanes. Click to expand." data-es="Ambos procesos modelados en BPMN 2.0 con Bizagi Modeler en 4 carriles. Haz clic para ampliar.">Both processes modeled in BPMN 2.0 with Bizagi Modeler across 4 lanes. Click to expand.</p>
-    </div>
-
-    <div class="bpmn-compare reveal">
-      <div class="diagram-box pool-container" onclick="openLightbox('as-is')">
-        <div class="pool-header asis">
-          <span class="pool-title" data-en="CURRENT STATE (AS-IS)" data-es="ESTADO ACTUAL (AS-IS)">CURRENT STATE (AS-IS)</span>
-          <span class="pill" style="background: var(--amber); color: white; border: none; font-size: 0.55rem;">DIAGRAM</span>
-        </div>
-        <div class="swimlane-row">
-          <div class="swimlane-label"><span>Logistics</span></div>
-          <div class="swimlane-flow"><div class="bpmn-el task">Manage Delivery</div><span class="bpmn-arrow">→</span><div class="bpmn-el circle-node end"></div></div>
-        </div>
-        <div class="swimlane-row">
-          <div class="swimlane-label"><span>Management</span></div>
-          <div class="swimlane-flow"><div class="bpmn-el task">Validate Req.</div><span class="bpmn-arrow">→</span><div class="bpmn-el gate-rhombus"></div><span class="bpmn-arrow">→</span><div class="bpmn-el task">Notify Rejection</div><span class="bpmn-arrow">--></span><div class="bpmn-el circle-node end"></div></div>
-        </div>
-        <div class="swimlane-row">
-          <div class="swimlane-label"><span>Admin</span></div>
-          <div class="swimlane-flow"><div class="bpmn-el task">Validate Request</div></div>
-        </div>
-        <div class="swimlane-row">
-          <div class="swimlane-label"><span>Field</span></div>
-          <div class="swimlane-flow"><div class="bpmn-el circle-node start"></div><span class="bpmn-arrow">→</span><div class="bpmn-el task">Generate Request</div></div>
-        </div>
-        <div class="pool-tags">
-          <span class="p-tag warn">⚠ No SLA defined</span>
-          <span class="p-tag warn">⚠ No digital record</span>
-        </div>
+    <section class="flow-section" id="problem">
+      <div class="sec-header">
+        <div class="sec-mono" data-en="01 · GATEWAY — Issue Detection" data-es="01 · GATEWAY — Detección de Problemas">
+          01 · GATEWAY — Issue Detection</div>
+        <h2 class="sec-title reveal" data-en="What was broken?" data-es="¿Qué fallaba?">What was broken?</h2>
+        <p class="sec-desc reveal"
+          data-en="The current process revealed 4 critical failures when mapped. Each became a decision point that blocked operational efficiency."
+          data-es="El proceso actual reveló 4 fallas críticas al ser mapeado. Cada una se convirtió en un punto de decisión que bloqueaba la eficiencia operativa.">
+          The current process revealed 4 critical failures when mapped. Each became a decision point that blocked
+          operational efficiency.</p>
       </div>
 
-      <div class="diagram-box pool-container" onclick="openLightbox('to-be')">
-        <div class="pool-header tobe">
-          <span class="pool-title" data-en="OPTIMIZED FLOW (TO-BE)" data-es="PROCESO OPTIMIZADO (TO-BE)">OPTIMIZED FLOW (TO-BE)</span>
-          <span class="pill" style="background: var(--green); color: white; border: none; font-size: 0.55rem;">DIAGRAM</span>
+      <div class="gateway-container reveal">
+        <div class="gateway-diamond">
+          <div class="gateway-diamond-inner" data-en="Issues<br/>Found?" data-es="¿Fallos<br/>Detectados?">
+            Issues<br />Found?</div>
         </div>
-        <div class="swimlane-row">
-          <div class="swimlane-label"><span>Logistics</span></div>
-          <div class="swimlane-flow"><div class="bpmn-el action-msg">⊠ Auto Notify</div><span class="bpmn-arrow">→</span><div class="bpmn-el task">Manage Delivery</div><span class="bpmn-arrow">→</span><div class="bpmn-el circle-node end"></div></div>
+        <div
+          style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--amber); font-weight: 600; margin-top: 0.8rem; letter-spacing: 0.05em;"
+          data-en="YES — 4 paths detected" data-es="SÍ — 4 rutas detectadas">YES — 4 paths detected</div>
+      </div>
+
+      <div class="node-grid reveal">
+        <div class="diagram-box node-card">
+          <div class="node-meta"><span>node_01</span><span>fail_path</span></div>
+          <h3 data-en="No Digital Record" data-es="Sin Registro Digital">No Digital Record</h3>
+          <p data-en="Requests were made verbally or on handwritten forms — impossible to track status or history."
+            data-es="Las solicitudes se hacían verbalmente o en formularios escritos — imposible rastrear estado o historial.">
+            Requests were made verbally or on handwritten forms — impossible to track status or history.</p>
         </div>
-        <div class="swimlane-row">
-          <div class="swimlane-label"><span>Management</span></div>
-          <div class="swimlane-flow"><div class="bpmn-el task">Verify Request</div><span class="bpmn-arrow">→</span><div class="bpmn-el gate-rhombus"></div><span class="bpmn-arrow">→</span><div class="bpmn-el action-imp">Record Reason</div></div>
+        <div class="diagram-box node-card">
+          <div class="node-meta"><span>node_02</span><span>fail_path</span></div>
+          <h3 data-en="No Approval SLA" data-es="Sin SLA de Aprobación">No Approval SLA</h3>
+          <p data-en="No defined maximum response time — causing delays that impacted field operations every campaign."
+            data-es="Sin tiempo máximo de respuesta definido — causando demoras que impactaban las operaciones de campo.">
+            No defined maximum response time — causing delays that impacted field operations every campaign.</p>
         </div>
-        <div class="swimlane-row">
-          <div class="swimlane-label"><span>Admin</span></div>
-          <div class="swimlane-flow"><div class="bpmn-el task">Validate</div><span class="bpmn-arrow">→</span><div class="bpmn-el action-imp">Send · 24h SLA</div><span class="bpmn-arrow">→</span><div class="bpmn-el action-msg">⊠ Auto Notif.</div></div>
+        <div class="diagram-box node-card">
+          <div class="node-meta"><span>node_03</span><span>fail_path</span></div>
+          <h3 data-en="No Rejection Log" data-es="Sin Registro de Rechazos">No Rejection Log</h3>
+          <p data-en="Rejection reasons were never documented — the same issues repeated every cycle without resolution."
+            data-es="Los motivos de rechazo nunca se documentaban — los mismos problemas se repetían cada ciclo.">
+            Rejection reasons were never documented — the same issues repeated every cycle without resolution.</p>
         </div>
-        <div class="swimlane-row">
-          <div class="swimlane-label"><span>Field</span></div>
-          <div class="swimlane-flow"><div class="bpmn-el circle-node start"></div><span class="bpmn-arrow">→</span><div class="bpmn-el task">Request</div><span class="bpmn-arrow">→</span><div class="bpmn-el action-imp">Register Digital</div></div>
-        </div>
-        <div class="pool-tags">
-          <span class="p-tag ok">✓ 24h SLA Enforced</span>
-          <span class="p-tag ok">✓ Automated Messaging Triggers</span>
+        <div class="diagram-box node-card">
+          <div class="node-meta"><span>node_04</span><span>fail_path</span></div>
+          <h3 data-en="No Logistics Visibility" data-es="Sin Visibilidad en Logística">No Logistics Visibility</h3>
+          <p data-en="Logistics only learned of approvals via physical notification — creating last-minute bottlenecks."
+            data-es="Logística solo se enteraba de las aprobaciones físicamente — creando cuellos de botella de último minuto.">
+            Logistics only learned of approvals via physical notification — creating last-minute bottlenecks.</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <div class="flow-connector"><div class="flow-connector-dot"></div></div>
-
-  <section class="flow-section" id="kpis">
-    <div class="sec-header">
-      <div class="sec-mono" data-en="03 · TASK — KPI Measurement" data-es="03 · TASK — Medición de KPIs">03 · TASK — KPI Measurement</div>
-      <h2 class="sec-title reveal" data-en="Process KPIs" data-es="KPIs del Proceso">Process KPIs</h2>
-      <p class="sec-desc reveal" data-en="30 simulated requirement requests · April–May 2026 campaign." data-es="30 solicitudes simuladas · Campaña abril–mayo 2026.">30 simulated requirement requests · April–May 2026 campaign.</p>
+    <div class="flow-connector">
+      <div class="flow-connector-dot"></div>
     </div>
 
-    <div class="kpi-container reveal">
-      <div class="kpi-item">
-        <div class="kpi-num" data-count="30">0</div>
-        <div class="kpi-text" data-en="Total Requests" data-es="Total Solicitudes">Total Requests</div>
-        <div class="kpi-progress"><div class="kpi-fill" data-width="100"></div></div>
+    <section class="flow-section" id="process">
+      <div class="sec-header">
+        <div class="sec-mono" data-en="02 · SUBPROCESS — BPMN Modeling" data-es="02 · SUBPROCESS — Modelado BPMN">02 ·
+          SUBPROCESS — BPMN Modeling</div>
+        <h2 class="sec-title reveal" data-en="AS-IS  ↔  TO-BE" data-es="AS-IS  ↔  TO-BE">AS-IS ↔ TO-BE</h2>
+        <p class="sec-desc reveal"
+          data-en="Both processes modeled in BPMN 2.0 with Bizagi Modeler across 4 lanes. Click to expand."
+          data-es="Ambos procesos modelados en BPMN 2.0 con Bizagi Modeler en 4 carriles. Haz clic para ampliar.">Both
+          processes modeled in BPMN 2.0 with Bizagi Modeler across 4 lanes. Click to expand.</p>
       </div>
-      <div class="kpi-item">
-        <div class="kpi-num" data-count="63" data-suffix="%">0%</div>
-        <div class="kpi-text" data-en="Approval Rate" data-es="Tasa de Aprobación">Approval Rate</div>
-        <div class="kpi-progress"><div class="kpi-fill" data-width="63"></div></div>
-      </div>
-      <div class="kpi-item">
-        <div class="kpi-num" data-count="23" data-suffix="h">0h</div>
-        <div class="kpi-text" data-en="Avg. Response Time" data-es="Tiempo Promedio">Avg. Response Time</div>
-        <div class="kpi-progress"><div class="kpi-fill" data-width="48"></div></div>
-      </div>
-      <div class="kpi-item">
-        <div class="kpi-num" data-count="60" data-suffix="%">0%</div>
-        <div class="kpi-text" data-en="SLA Compliance ≤24h" data-es="Cumplimiento SLA">SLA Compliance ≤24h</div>
-        <div class="kpi-progress"><div class="kpi-fill" data-width="60"></div></div>
-      </div>
-      <div class="kpi-item">
-        <div class="kpi-num" data-count="19">0</div>
-        <div class="kpi-text" data-en="Approved" data-es="Aprobados">Approved</div>
-        <div class="kpi-progress"><div class="kpi-fill" data-width="63"></div></div>
-      </div>
-      <div class="kpi-item">
-        <div class="kpi-num red" data-count="11">0</div>
-        <div class="kpi-text" data-en="Rejected" data-es="Rechazados">Rejected</div>
-        <div class="kpi-progress"><div class="kpi-fill red" data-width="37"></div></div>
-      </div>
-    </div>
-  </section>
 
-  <div class="flow-connector"><div class="flow-connector-dot"></div></div>
-
-  <section class="flow-section" id="chart">
-    <div class="sec-header">
-      <div class="sec-mono" data-en="04 · SUBPROCESS — Data Visualization" data-es="04 · SUBPROCESS — Visualización de Datos">04 · SUBPROCESS — Data Visualization</div>
-      <h2 class="sec-title reveal" data-en="Interactive Dashboard" data-es="Dashboard Interactivo">Interactive Dashboard</h2>
-      <p class="sec-desc reveal" data-en="Same data as the Power BI report — explore requests by area, type and approval status." data-es="Misma data que el reporte Power BI — explora solicitudes por área, tipo y estado de aprobación.">Same data as the Power BI report — explore requests by area, type and approval status.</p>
-    </div>
-
-    <div class="diagram-box reveal">
-      <div class="chart-wrapper">
-        <div class="chart-menu">
-          <div style="font-family: var(--font-mono); font-size: 0.58rem; color: var(--ink3); margin-bottom: 0.3rem; text-transform: uppercase; font-weight: 600;" data-en="Select Metric Layer" data-es="Seleccionar Métrica">Select Metric Layer</div>
-          <button class="chart-menu-btn active" onclick="switchChart('area',this)" data-en="By Area" data-es="Por Área">By Area</button>
-          <button class="chart-menu-btn" onclick="switchChart('type',this)" data-en="By Type" data-es="Por Tipo">By Type</button>
-          <button class="chart-menu-btn" onclick="switchChart('status',this)" data-en="Status" data-es="Estado">Status</button>
+      <div class="bpmn-compare reveal">
+        <div class="diagram-box pool-container" onclick="openLightbox('as-is')">
+          <div class="pool-header asis">
+            <span class="pool-title" data-en="CURRENT STATE (AS-IS)" data-es="ESTADO ACTUAL (AS-IS)">CURRENT STATE
+              (AS-IS)</span>
+            <span class="pill"
+              style="background: var(--amber); color: white; border: none; font-size: 0.55rem;">DIAGRAM</span>
+          </div>
+          <div class="swimlane-row">
+            <div class="swimlane-label"><span>Logistics</span></div>
+            <div class="swimlane-flow">
+              <div class="bpmn-el task">Manage Delivery</div><span class="bpmn-arrow">→</span>
+              <div class="bpmn-el circle-node end"></div>
+            </div>
+          </div>
+          <div class="swimlane-row">
+            <div class="swimlane-label"><span>Management</span></div>
+            <div class="swimlane-flow">
+              <div class="bpmn-el task">Validate Req.</div><span class="bpmn-arrow">→</span>
+              <div class="bpmn-el gate-rhombus"></div><span class="bpmn-arrow">→</span>
+              <div class="bpmn-el task">Notify Rejection</div><span class="bpmn-arrow">--></span>
+              <div class="bpmn-el circle-node end"></div>
+            </div>
+          </div>
+          <div class="swimlane-row">
+            <div class="swimlane-label"><span>Admin</span></div>
+            <div class="swimlane-flow">
+              <div class="bpmn-el task">Validate Request</div>
+            </div>
+          </div>
+          <div class="swimlane-row">
+            <div class="swimlane-label"><span>Field</span></div>
+            <div class="swimlane-flow">
+              <div class="bpmn-el circle-node start"></div><span class="bpmn-arrow">→</span>
+              <div class="bpmn-el task">Generate Request</div>
+            </div>
+          </div>
+          <div class="pool-tags">
+            <span class="p-tag warn">⚠ No SLA defined</span>
+            <span class="p-tag warn">⚠ No digital record</span>
+          </div>
         </div>
-        <div style="display: flex; flex-direction: column;">
-          <div id="chartLabel" style="font-family: var(--font-mono); font-size: 0.7rem; font-weight: 600; color: var(--green); text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.05em;">Requests by Area</div>
-          <div class="chart-display">
-            <canvas id="mainChart"></canvas>
+
+        <div class="diagram-box pool-container" onclick="openLightbox('to-be')">
+          <div class="pool-header tobe">
+            <span class="pool-title" data-en="OPTIMIZED FLOW (TO-BE)" data-es="PROCESO OPTIMIZADO (TO-BE)">OPTIMIZED
+              FLOW (TO-BE)</span>
+            <span class="pill"
+              style="background: var(--green); color: white; border: none; font-size: 0.55rem;">DIAGRAM</span>
+          </div>
+          <div class="swimlane-row">
+            <div class="swimlane-label"><span>Logistics</span></div>
+            <div class="swimlane-flow">
+              <div class="bpmn-el action-msg">⊠ Auto Notify</div><span class="bpmn-arrow">→</span>
+              <div class="bpmn-el task">Manage Delivery</div><span class="bpmn-arrow">→</span>
+              <div class="bpmn-el circle-node end"></div>
+            </div>
+          </div>
+          <div class="swimlane-row">
+            <div class="swimlane-label"><span>Management</span></div>
+            <div class="swimlane-flow">
+              <div class="bpmn-el task">Verify Request</div><span class="bpmn-arrow">→</span>
+              <div class="bpmn-el gate-rhombus"></div><span class="bpmn-arrow">→</span>
+              <div class="bpmn-el action-imp">Record Reason</div>
+            </div>
+          </div>
+          <div class="swimlane-row">
+            <div class="swimlane-label"><span>Admin</span></div>
+            <div class="swimlane-flow">
+              <div class="bpmn-el task">Validate</div><span class="bpmn-arrow">→</span>
+              <div class="bpmn-el action-imp">Send · 24h SLA</div><span class="bpmn-arrow">→</span>
+              <div class="bpmn-el action-msg">⊠ Auto Notif.</div>
+            </div>
+          </div>
+          <div class="swimlane-row">
+            <div class="swimlane-label"><span>Field</span></div>
+            <div class="swimlane-flow">
+              <div class="bpmn-el circle-node start"></div><span class="bpmn-arrow">→</span>
+              <div class="bpmn-el task">Request</div><span class="bpmn-arrow">→</span>
+              <div class="bpmn-el action-imp">Register Digital</div>
+            </div>
+          </div>
+          <div class="pool-tags">
+            <span class="p-tag ok">✓ 24h SLA Enforced</span>
+            <span class="p-tag ok">✓ Automated Messaging Triggers</span>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <div class="flow-connector"><div class="flow-connector-dot"></div></div>
-
-  <section class="flow-section" id="improvements">
-    <div class="sec-header">
-      <div class="sec-mono" data-en="05 · PARALLEL GATEWAY — Improvements" data-es="05 · PARALLEL GATEWAY — Mejoras">05 · PARALLEL GATEWAY — Improvements</div>
-      <h2 class="sec-title reveal" data-en="From AS-IS to TO-BE" data-es="Del AS-IS al TO-BE">From AS-IS to TO-BE</h2>
-      <p class="sec-desc reveal" data-en="4 improvements running in parallel — all implemented in the redesigned process." data-es="4 mejoras ejecutadas en paralelo — todas implementadas en el proceso rediseñado.">4 improvements running in parallel — all implemented in the redesigned process.</p>
+    <div class="flow-connector">
+      <div class="flow-connector-dot"></div>
     </div>
 
-    <div class="gateway-container reveal">
-      <div class="gateway-diamond" style="background: var(--green-bg); border-color: var(--green);">
-        <div class="gateway-diamond-inner" style="color: var(--green);" data-en="4 paths<br/>parallel" data-es="4 rutas<br/>paralelas">4 paths<br/>parallel</div>
+    <section class="flow-section" id="kpis">
+      <div class="sec-header">
+        <div class="sec-mono" data-en="03 · TASK — KPI Measurement" data-es="03 · TASK — Medición de KPIs">03 · TASK —
+          KPI Measurement</div>
+        <h2 class="sec-title reveal" data-en="Process KPIs" data-es="KPIs del Proceso">Process KPIs</h2>
+        <p class="sec-desc reveal" data-en="30 simulated requirement requests · April–May 2026 campaign."
+          data-es="30 solicitudes simuladas · Campaña abril–mayo 2026.">30 simulated requirement requests · April–May
+          2026 campaign.</p>
       </div>
-      <div style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--green); font-weight: 600; margin-top: 0.8rem; letter-spacing: 0.05em;" data-en="ALL — Applied Simultaneously" data-es="TODOS — Aplicados Simultáneamente">ALL — Applied Simultaneously</div>
-    </div>
 
-    <div class="node-grid reveal">
-      <div class="diagram-box node-card success-gate">
-        <div class="node-meta"><span>improvement_01</span><span>success_node</span></div>
-        <h4 data-en="Digital Request Registration" data-es="Registro Digital de Solicitudes">Digital Request Registration</h4>
-        <p data-en="Every request is now logged digitally from the start — full traceability and historical analysis enabled." data-es="Cada solicitud se registra digitalmente desde el inicio — trazabilidad completa y análisis histórico habilitados.">Every request is now logged digitally from the start — full traceability and historical analysis enabled.</p>
-      </div>
-      <div class="diagram-box node-card success-gate">
-        <div class="node-meta"><span>improvement_02</span><span>success_node</span></div>
-        <h4 data-en="24-Hour Response SLA" data-es="SLA de Respuesta 24 Horas">24-Hour Response SLA</h4>
-        <p data-en="Management now has a defined maximum response window — operational delays in the field reduced." data-es="Gerencia ahora tiene una ventana máxima de respuesta definida — demoras operativas en campo reducidas.">Management now has a defined maximum response window — operational delays in the field reduced.</p>
-      </div>
-      <div class="diagram-box node-card success-gate">
-        <div class="node-meta"><span>improvement_03</span><span>success_node</span></div>
-        <h4 data-en="Rejection Reason Tracking" data-es="Seguimiento del Motivo de Rechazo">Rejection Reason Tracking</h4>
-        <p data-en="Rejection reasons are recorded and communicated back to the field — enabling real continuous improvement." data-es="Los motivos de rechazo se registran y comunican al campo — habilitando mejora continua real.">Rejection reasons are recorded and communicated back to the field — enabling real continuous improvement.</p>
-      </div>
-      <div class="diagram-box node-card success-gate">
-        <div class="node-meta"><span>improvement_04</span><span>success_node</span></div>
-        <h4 data-en="Automatic Logistics Notification" data-es="Notificación Automática a Logística">Automatic Logistics Notification</h4>
-        <p data-en="Upon approval, logistics receives an automatic message event — eliminating last-minute bottlenecks." data-es="Al aprobarse, logística recibe un evento de mensaje automático — eliminando cuellos de botella de último minuto.">Upon approval, logistics receives an automatic message event — eliminating last-minute bottlenecks.</p>
-      </div>
-    </div>
-  </section>
-
-  <div class="flow-connector"><div class="flow-connector-dot"></div></div>
-
-  <section class="flow-section" id="tools">
-    <div class="sec-header">
-      <div class="sec-mono" data-en="06 · POOL — Tech Stack" data-es="06 · POOL — Herramientas">06 · POOL — Tech Stack</div>
-      <h2 class="sec-title reveal" data-en="Tools & Methodologies" data-es="Herramientas y Metodologías">Tools & Methodologies</h2>
-    </div>
-
-    <div class="stack-swimlane reveal">
-      <div class="stack-row">
-        <div class="stack-label" data-en="Modeling" data-es="Modelado">Modeling</div>
-        <div class="stack-chips">
-          <span class="pill heavy">Bizagi Modeler</span>
-          <span class="pill">Lucidchart</span>
-          <span class="pill">BPMN 2.0</span>
-          <span class="pill">AS-IS / TO-BE</span>
+      <div class="kpi-container reveal">
+        <div class="kpi-item">
+          <div class="kpi-num" data-count="30">0</div>
+          <div class="kpi-text" data-en="Total Requests" data-es="Total Solicitudes">Total Requests</div>
+          <div class="kpi-progress">
+            <div class="kpi-fill" data-width="100"></div>
+          </div>
+        </div>
+        <div class="kpi-item">
+          <div class="kpi-num" data-count="63" data-suffix="%">0%</div>
+          <div class="kpi-text" data-en="Approval Rate" data-es="Tasa de Aprobación">Approval Rate</div>
+          <div class="kpi-progress">
+            <div class="kpi-fill" data-width="63"></div>
+          </div>
+        </div>
+        <div class="kpi-item">
+          <div class="kpi-num" data-count="23" data-suffix="h">0h</div>
+          <div class="kpi-text" data-en="Avg. Response Time" data-es="Tiempo Promedio">Avg. Response Time</div>
+          <div class="kpi-progress">
+            <div class="kpi-fill" data-width="48"></div>
+          </div>
+        </div>
+        <div class="kpi-item">
+          <div class="kpi-num" data-count="60" data-suffix="%">0%</div>
+          <div class="kpi-text" data-en="SLA Compliance ≤24h" data-es="Cumplimiento SLA">SLA Compliance ≤24h</div>
+          <div class="kpi-progress">
+            <div class="kpi-fill" data-width="60"></div>
+          </div>
+        </div>
+        <div class="kpi-item">
+          <div class="kpi-num" data-count="19">0</div>
+          <div class="kpi-text" data-en="Approved" data-es="Aprobados">Approved</div>
+          <div class="kpi-progress">
+            <div class="kpi-fill" data-width="63"></div>
+          </div>
+        </div>
+        <div class="kpi-item">
+          <div class="kpi-num red" data-count="11">0</div>
+          <div class="kpi-text" data-en="Rejected" data-es="Rechazados">Rejected</div>
+          <div class="kpi-progress">
+            <div class="kpi-fill red" data-width="37"></div>
+          </div>
         </div>
       </div>
-      <div class="stack-row">
-        <div class="stack-label" data-en="Analytics" data-es="Análisis">Analytics</div>
-        <div class="stack-chips">
-          <span class="pill heavy">Power BI</span>
-          <span class="pill heavy">Excel Advanced</span>
-          <span class="pill">Power Query</span>
-          <span class="pill">DAX</span>
-        </div>
-      </div>
-      <div class="stack-row">
-        <div class="stack-label" data-en="Methods" data-es="Metodologías">Methods</div>
-        <div class="stack-chips">
-          <span class="pill">KPI Management</span>
-          <span class="pill">SLA Definition</span>
-          <span class="pill">Continuous Improvement</span>
-          <span class="pill">Process Documentation</span>
-        </div>
-      </div>
+    </section>
+
+    <div class="flow-connector">
+      <div class="flow-connector-dot"></div>
     </div>
-  </section>
 
-  <div class="end-wrapper">
-    <div class="end-node"></div>
-    <div style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 600; color: var(--red); letter-spacing: 0.1em;" data-en="PROCESS COMPLETE" data-es="PROCESO COMPLETADO">PROCESS COMPLETE</div>
-    <div style="font-size: 0.85rem; color: var(--ink3); font-weight: 300; margin-top: 0.4rem;" data-en="Built by Job Isai Pulache Carreño · Process & Systems Analyst" data-es="Construido por Job Isai Pulache Carreño · Analista de Procesos y Sistemas">Built by Job Isai Pulache Carreño · Process & Systems Analyst</div>
+    <section class="flow-section" id="chart">
+      <div class="sec-header">
+        <div class="sec-mono" data-en="04 · SUBPROCESS — Data Visualization"
+          data-es="04 · SUBPROCESS — Visualización de Datos">04 · SUBPROCESS — Data Visualization</div>
+        <h2 class="sec-title reveal" data-en="Interactive Dashboard" data-es="Dashboard Interactivo">Interactive
+          Dashboard</h2>
+        <p class="sec-desc reveal"
+          data-en="Same data as the Power BI report — explore requests by area, type and approval status."
+          data-es="Misma data que el reporte Power BI — explora solicitudes por área, tipo y estado de aprobación.">Same
+          data as the Power BI report — explore requests by area, type and approval status.</p>
+      </div>
+
+      <div class="diagram-box reveal">
+        <div class="chart-wrapper">
+          <div class="chart-menu">
+            <div
+              style="font-family: var(--font-mono); font-size: 0.58rem; color: var(--ink3); margin-bottom: 0.3rem; text-transform: uppercase; font-weight: 600;"
+              data-en="Select Metric Layer" data-es="Seleccionar Métrica">Select Metric Layer</div>
+            <button class="chart-menu-btn active" onclick="switchChart('area',this)" data-en="By Area"
+              data-es="Por Área">By Area</button>
+            <button class="chart-menu-btn" onclick="switchChart('type',this)" data-en="By Type" data-es="Por Tipo">By
+              Type</button>
+            <button class="chart-menu-btn" onclick="switchChart('status',this)" data-en="Status"
+              data-es="Estado">Status</button>
+          </div>
+          <div style="display: flex; flex-direction: column;">
+            <div id="chartLabel"
+              style="font-family: var(--font-mono); font-size: 0.7rem; font-weight: 600; color: var(--green); text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.05em;">
+              Requests by Area</div>
+            <div class="chart-display">
+              <canvas id="mainChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="flow-connector">
+      <div class="flow-connector-dot"></div>
+    </div>
+
+    <section class="flow-section" id="improvements">
+      <div class="sec-header">
+        <div class="sec-mono" data-en="05 · PARALLEL GATEWAY — Improvements" data-es="05 · PARALLEL GATEWAY — Mejoras">
+          05 · PARALLEL GATEWAY — Improvements</div>
+        <h2 class="sec-title reveal" data-en="From AS-IS to TO-BE" data-es="Del AS-IS al TO-BE">From AS-IS to TO-BE</h2>
+        <p class="sec-desc reveal"
+          data-en="4 improvements running in parallel — all implemented in the redesigned process."
+          data-es="4 mejoras ejecutadas en paralelo — todas implementadas en el proceso rediseñado.">4 improvements
+          running in parallel — all implemented in the redesigned process.</p>
+      </div>
+
+      <div class="gateway-container reveal">
+        <div class="gateway-diamond" style="background: var(--green-bg); border-color: var(--green);">
+          <div class="gateway-diamond-inner" style="color: var(--green);" data-en="4 paths<br/>parallel"
+            data-es="4 rutas<br/>paralelas">4 paths<br />parallel</div>
+        </div>
+        <div
+          style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--green); font-weight: 600; margin-top: 0.8rem; letter-spacing: 0.05em;"
+          data-en="ALL — Applied Simultaneously" data-es="TODOS — Aplicados Simultáneamente">ALL — Applied
+          Simultaneously</div>
+      </div>
+
+      <div class="node-grid reveal">
+        <div class="diagram-box node-card success-gate">
+          <div class="node-meta"><span>improvement_01</span><span>success_node</span></div>
+          <h4 data-en="Digital Request Registration" data-es="Registro Digital de Solicitudes">Digital Request
+            Registration</h4>
+          <p data-en="Every request is now logged digitally from the start — full traceability and historical analysis enabled."
+            data-es="Cada solicitud se registra digitalmente desde el inicio — trazabilidad completa y análisis histórico habilitados.">
+            Every request is now logged digitally from the start — full traceability and historical analysis enabled.
+          </p>
+        </div>
+        <div class="diagram-box node-card success-gate">
+          <div class="node-meta"><span>improvement_02</span><span>success_node</span></div>
+          <h4 data-en="24-Hour Response SLA" data-es="SLA de Respuesta 24 Horas">24-Hour Response SLA</h4>
+          <p data-en="Management now has a defined maximum response window — operational delays in the field reduced."
+            data-es="Gerencia ahora tiene una ventana máxima de respuesta definida — demoras operativas en campo reducidas.">
+            Management now has a defined maximum response window — operational delays in the field reduced.</p>
+        </div>
+        <div class="diagram-box node-card success-gate">
+          <div class="node-meta"><span>improvement_03</span><span>success_node</span></div>
+          <h4 data-en="Rejection Reason Tracking" data-es="Seguimiento del Motivo de Rechazo">Rejection Reason Tracking
+          </h4>
+          <p data-en="Rejection reasons are recorded and communicated back to the field — enabling real continuous improvement."
+            data-es="Los motivos de rechazo se registran y comunican al campo — habilitando mejora continua real.">
+            Rejection reasons are recorded and communicated back to the field — enabling real continuous improvement.
+          </p>
+        </div>
+        <div class="diagram-box node-card success-gate">
+          <div class="node-meta"><span>improvement_04</span><span>success_node</span></div>
+          <h4 data-en="Automatic Logistics Notification" data-es="Notificación Automática a Logística">Automatic
+            Logistics Notification</h4>
+          <p data-en="Upon approval, logistics receives an automatic message event — eliminating last-minute bottlenecks."
+            data-es="Al aprobarse, logística recibe un evento de mensaje automático — eliminando cuellos de botella de último minuto.">
+            Upon approval, logistics receives an automatic message event — eliminating last-minute bottlenecks.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="flow-connector">
+      <div class="flow-connector-dot"></div>
+    </div>
+
+    <section class="flow-section" id="tools">
+      <div class="sec-header">
+        <div class="sec-mono" data-en="06 · POOL — Tech Stack" data-es="06 · POOL — Herramientas">06 · POOL — Tech Stack
+        </div>
+        <h2 class="sec-title reveal" data-en="Tools & Methodologies" data-es="Herramientas y Metodologías">Tools &
+          Methodologies</h2>
+      </div>
+
+      <div class="stack-swimlane reveal">
+        <div class="stack-row">
+          <div class="stack-label" data-en="Modeling" data-es="Modelado">Modeling</div>
+          <div class="stack-chips">
+            <span class="pill heavy">Bizagi Modeler</span>
+            <span class="pill">Lucidchart</span>
+            <span class="pill">BPMN 2.0</span>
+            <span class="pill">AS-IS / TO-BE</span>
+          </div>
+        </div>
+        <div class="stack-row">
+          <div class="stack-label" data-en="Analytics" data-es="Análisis">Analytics</div>
+          <div class="stack-chips">
+            <span class="pill heavy">Power BI</span>
+            <span class="pill heavy">Excel Advanced</span>
+            <span class="pill">Power Query</span>
+            <span class="pill">DAX</span>
+          </div>
+        </div>
+        <div class="stack-row">
+          <div class="stack-label" data-en="Methods" data-es="Metodologías">Methods</div>
+          <div class="stack-chips">
+            <span class="pill">KPI Management</span>
+            <span class="pill">SLA Definition</span>
+            <span class="pill">Continuous Improvement</span>
+            <span class="pill">Process Documentation</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="end-wrapper">
+      <div class="end-node"></div>
+      <div
+        style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 600; color: var(--red); letter-spacing: 0.1em;"
+        data-en="PROCESS COMPLETE" data-es="PROCESO COMPLETADO">PROCESS COMPLETE</div>
+      <div style="font-size: 0.85rem; color: var(--ink3); font-weight: 300; margin-top: 0.4rem;"
+        data-en="Built by Job Isai Pulache Carreño · Process & Systems Analyst"
+        data-es="Construido por Job Isai Pulache Carreño · Analista de Procesos y Sistemas">Built by Job Isai Pulache
+        Carreño · Process & Systems Analyst</div>
+    </div>
+
   </div>
 
-</div>
+  <footer>
+    <div class="foot-left">
+      <h5>Job Isai Pulache Carreño</h5>
+      <p data-en="Process & Systems Analyst · Piura, Perú" data-es="Analista de Procesos y Sistemas · Piura, Perú">
+        Process & Systems Analyst · Piura, Perú</p>
+    </div>
+    <div class="foot-right">
+      <a href="https://jobpulachecarreno.netlify.app/" target="_blank">Portfolio</a>
+      <a href="https://github.com/Job-Pulache" target="_blank">GitHub</a>
+      <a href="mailto:pulachecarrenojob@gmail.com">Email</a>
+    </div>
+  </footer>
 
-<footer>
-  <div class="foot-left">
-    <h5>Job Isai Pulache Carreño</h5>
-    <p data-en="Process & Systems Analyst · Piura, Perú" data-es="Analista de Procesos y Sistemas · Piura, Perú">Process & Systems Analyst · Piura, Perú</p>
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="close-lb" onclick="closeLightbox()">✕</button>
+    <img id="lb-img" src="" alt="Process Architecture Engine" />
   </div>
-  <div class="foot-right">
-    <a href="https://jobpulachecarreno.netlify.app/" target="_blank">Portfolio</a>
-    <a href="https://github.com/Job-Pulache" target="_blank">GitHub</a>
-    <a href="mailto:pulachecarrenojob@gmail.com">Email</a>
-  </div>
-</footer>
 
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-  <button class="close-lb" onclick="closeLightbox()">✕</button>
-  <img id="lb-img" src="" alt="Process Architecture Engine"/>
-</div>
-
-<script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
+
 </html>
