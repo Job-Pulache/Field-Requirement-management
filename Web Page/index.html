@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Requirement Process Management System</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">// RPMS · PURAFRUIT</div>
+  <ul class="nav-links">
+    <li><a href="#problem" data-en="Problem" data-es="Problema">Problem</a></li>
+    <li><a href="#diagrams" data-en="Process" data-es="Proceso">Process</a></li>
+    <li><a href="#kpis" data-en="KPIs" data-es="KPIs">KPIs</a></li>
+    <li><a href="#improvements" data-en="Improvements" data-es="Mejoras">Improvements</a></li>
+  </ul>
+  <div class="lang-toggle">
+    <button class="lang-btn active" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" onclick="setLang('es')">ES</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow" data-en="// process analysis · agro-export sector" data-es="// análisis de procesos · sector agroexportador">// process analysis · agro-export sector</div>
+  <h1 data-en="Requirement<br/><span>Process</span><br/>Management" data-es="Sistema de Gestión<br/>de <span>Procesos</span><br/>de Requerimientos">Requirement<br/><span>Process</span><br/>Management</h1>
+  <p class="hero-sub" data-en="Full process analysis for an agro-export company. AS-IS mapping, TO-BE redesign, KPI dashboards and continuous improvement — built as a portfolio project targeting a Process Analyst role." data-es="Análisis de procesos completo para una empresa agroexportadora. Mapeo AS-IS, rediseño TO-BE, dashboards de KPIs y mejora continua — construido como proyecto de portafolio para el rol de Analista de Procesos.">Full process analysis for an agro-export company. AS-IS mapping, TO-BE redesign, KPI dashboards and continuous improvement — built as a portfolio project targeting a Process Analyst role.</p>
+  <div class="hero-chips">
+    <span class="chip">Bizagi BPMN 2.0</span>
+    <span class="chip">Excel Advanced</span>
+    <span class="chip">Power BI</span>
+    <span class="chip">Process Mapping</span>
+    <span class="chip">KPI Analysis</span>
+  </div>
+  <!-- HERO MINI BPMN -->
+  <div class="hero-diagram">
+    <div class="bpmn-pool">
+      <div class="bpmn-lane">
+        <div class="bpmn-lane-label">Logistics</div>
+        <div class="bpmn-lane-content">
+          <div class="bpmn-msg-task">Auto Notify</div>
+          <div class="bpmn-arrow"></div>
+          <div class="bpmn-task">Manage Delivery</div>
+          <div class="bpmn-arrow"></div>
+          <div class="bpmn-event-end"></div>
+        </div>
+      </div>
+      <div class="bpmn-lane">
+        <div class="bpmn-lane-label">Management</div>
+        <div class="bpmn-lane-content">
+          <div class="bpmn-task">Verify Request</div>
+          <div class="bpmn-arrow"></div>
+          <div class="bpmn-gateway"></div>
+        </div>
+      </div>
+      <div class="bpmn-lane">
+        <div class="bpmn-lane-label">Admin</div>
+        <div class="bpmn-lane-content">
+          <div class="bpmn-task">Validate</div>
+          <div class="bpmn-arrow"></div>
+          <div class="bpmn-task">Send · 24h SLA</div>
+        </div>
+      </div>
+      <div class="bpmn-lane">
+        <div class="bpmn-lane-label">Field</div>
+        <div class="bpmn-lane-content">
+          <div class="bpmn-event-start"></div>
+          <div class="bpmn-arrow"></div>
+          <div class="bpmn-task">Request</div>
+          <div class="bpmn-arrow"></div>
+          <div class="bpmn-task">Register</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONNECTOR -->
+<div class="section-connector"><div class="connector-line"></div><div class="connector-node"></div><div class="connector-line"></div></div>
+
+<!-- PROBLEM -->
+<section class="problem" id="problem">
+  <div class="sec-label" data-en="01 — Problem" data-es="01 — Problema">01 — Problem</div>
+  <h2 class="sec-title reveal" data-en="What was broken?" data-es="¿Qué fallaba?">What was broken?</h2>
+  <p class="sec-desc reveal" data-en="In agro-export operations, requirement requests moved verbally or on paper — no traceability, no SLA, no visibility for management." data-es="En las operaciones agroexportadoras, las solicitudes se manejaban verbalmente o en papel — sin trazabilidad, sin SLA y sin visibilidad para gerencia.">In agro-export operations, requirement requests moved verbally or on paper — no traceability, no SLA, no visibility for management.</p>
+  <div class="problem-nodes">
+    <div class="p-node reveal">
+      <div class="p-node-id">node_01</div>
+      <h3 data-en="No digital record" data-es="Sin registro digital">No digital record</h3>
+      <p data-en="Requests were made verbally or on handwritten forms with no way to track status or history." data-es="Las solicitudes se hacían verbalmente o en formularios escritos sin manera de rastrear el estado o historial.">Requests were made verbally or on handwritten forms with no way to track status or history.</p>
+    </div>
+    <div class="p-node reveal">
+      <div class="p-node-id">node_02</div>
+      <h3 data-en="No approval SLA" data-es="Sin SLA de aprobación">No approval SLA</h3>
+      <p data-en="No defined maximum time for management to respond — causing delays that impacted field operations." data-es="Sin tiempo máximo definido para que gerencia respondiera — causando demoras que impactaban el campo.">No defined maximum time for management to respond — causing delays that impacted field operations.</p>
+    </div>
+    <div class="p-node reveal">
+      <div class="p-node-id">node_03</div>
+      <h3 data-en="No rejection tracking" data-es="Sin seguimiento de rechazos">No rejection tracking</h3>
+      <p data-en="When a request was rejected the reason was never recorded — the same issues repeated across every campaign." data-es="Cuando se rechazaba una solicitud el motivo nunca se registraba — los mismos problemas se repetían cada campaña.">When a request was rejected the reason was never recorded — the same issues repeated across every campaign.</p>
+    </div>
+    <div class="p-node reveal">
+      <div class="p-node-id">node_04</div>
+      <h3 data-en="Logistics had no visibility" data-es="Logística sin visibilidad">Logistics had no visibility</h3>
+      <p data-en="Logistics only learned of approved requests via physical notification — creating last-minute bottlenecks." data-es="Logística solo se enteraba de las aprobaciones por notificación física — creando cuellos de botella de último minuto.">Logistics only learned of approved requests via physical notification — creating last-minute bottlenecks.</p>
+    </div>
+  </div>
+</section>
+
+<div class="section-connector"><div class="connector-line"></div><div class="connector-node"></div><div class="connector-line"></div></div>
+
+<!-- DIAGRAMS -->
+<section class="diagrams" id="diagrams">
+  <div class="sec-label" data-en="02 — Process Mapping" data-es="02 — Mapeo de Procesos">02 — Process Mapping</div>
+  <h2 class="sec-title reveal" data-en="AS-IS  vs  TO-BE" data-es="AS-IS  vs  TO-BE">AS-IS  vs  TO-BE</h2>
+  <p class="sec-desc reveal" data-en="Both processes modeled in BPMN 2.0 with Bizagi Modeler. Click any panel to expand." data-es="Ambos procesos modelados en BPMN 2.0 con Bizagi Modeler. Haz clic en cualquier panel para ampliar.">Both processes modeled in BPMN 2.0 with Bizagi Modeler. Click any panel to expand.</p>
+  <div class="compare-wrap reveal">
+    <!-- AS-IS -->
+    <div class="diagram-col">
+      <div class="diagram-col-header">
+        <span class="diagram-col-label label-asis" data-en="Current State" data-es="Estado Actual">Current State</span>
+        <span class="badge badge-asis">AS-IS</span>
+      </div>
+      <div class="diagram-body" onclick="openLightbox('as-is')" title="Click to expand">
+        <div class="mini-pool">
+          <div class="mini-lane">
+            <span class="mini-lane-lbl">Logistics</span>
+            <div class="mn-task">Manage Delivery</div>
+            <span class="mn-arr">→</span>
+            <div class="mn-ev-e"></div>
+          </div>
+          <div class="mini-lane">
+            <span class="mini-lane-lbl">Management</span>
+            <div class="mn-task">Validate Req.</div>
+            <span class="mn-arr">→</span>
+            <div class="mn-gw"></div>
+            <span class="mn-arr">→</span>
+            <div class="mn-task">Notify Rejection</div>
+            <span class="mn-arr">→</span>
+            <div class="mn-ev-e"></div>
+          </div>
+          <div class="mini-lane">
+            <span class="mini-lane-lbl">Admin</span>
+            <div class="mn-task">Validate Request</div>
+          </div>
+          <div class="mini-lane">
+            <span class="mini-lane-lbl">Field</span>
+            <div class="mn-ev-s"></div>
+            <span class="mn-arr">→</span>
+            <div class="mn-task">Generate Req.</div>
+          </div>
+        </div>
+        <div class="improvements-row" style="margin-top:0.8rem;">
+          <span style="font-size:0.72rem;color:var(--text3);font-family:'JetBrains Mono',monospace;">// issues detected</span>
+          <span style="font-size:0.75rem;color:var(--amber);">⚠ No SLA defined</span>
+          <span style="font-size:0.75rem;color:var(--amber);">⚠ No digital record</span>
+          <span style="font-size:0.75rem;color:var(--amber);">⚠ No rejection log</span>
+          <span style="font-size:0.75rem;color:var(--amber);">⚠ Manual logistics alert</span>
+        </div>
+      </div>
+      <div class="diagram-footer" data-en="Manual · No SLA · No traceability · 4 lanes" data-es="Manual · Sin SLA · Sin trazabilidad · 4 carriles">Manual · No SLA · No traceability · 4 lanes</div>
+    </div>
+    <!-- TO-BE -->
+    <div class="diagram-col">
+      <div class="diagram-col-header">
+        <span class="diagram-col-label label-tobe" data-en="Improved State" data-es="Estado Mejorado">Improved State</span>
+        <span class="badge badge-tobe">TO-BE</span>
+      </div>
+      <div class="diagram-body" onclick="openLightbox('to-be')" title="Click to expand">
+        <div class="mini-pool">
+          <div class="mini-lane">
+            <span class="mini-lane-lbl">Logistics</span>
+            <div class="mn-msg">Auto Notify</div>
+            <span class="mn-arr">→</span>
+            <div class="mn-task">Manage Delivery</div>
+            <span class="mn-arr">→</span>
+            <div class="mn-ev-e"></div>
+          </div>
+          <div class="mini-lane">
+            <span class="mini-lane-lbl">Management</span>
+            <div class="mn-task">Verify Request</div>
+            <span class="mn-arr">→</span>
+            <div class="mn-gw"></div>
+            <span class="mn-arr">→</span>
+            <div class="mn-task">Record Reason</div>
+          </div>
+          <div class="mini-lane">
+            <span class="mini-lane-lbl">Admin</span>
+            <div class="mn-task">Validate</div>
+            <span class="mn-arr">→</span>
+            <div class="mn-task">Send · 24h SLA</div>
+            <span class="mn-arr">→</span>
+            <div class="mn-msg">Auto Notif.</div>
+          </div>
+          <div class="mini-lane">
+            <span class="mini-lane-lbl">Field</span>
+            <div class="mn-ev-s"></div>
+            <span class="mn-arr">→</span>
+            <div class="mn-task">Request</div>
+            <span class="mn-arr">→</span>
+            <div class="mn-task">Register Digital</div>
+          </div>
+        </div>
+        <div class="improvements-row" style="margin-top:0.8rem;">
+          <span style="font-size:0.72rem;color:var(--text3);font-family:'JetBrains Mono',monospace;">// improvements applied</span>
+          <span class="improvement-tag" data-en="24h SLA enforced" data-es="SLA de 24h aplicado">24h SLA enforced</span>
+          <span class="improvement-tag" data-en="Digital registration" data-es="Registro digital">Digital registration</span>
+          <span class="improvement-tag" data-en="Rejection logging" data-es="Registro de rechazos">Rejection logging</span>
+          <span class="improvement-tag" data-en="Automatic notification" data-es="Notificación automática">Automatic notification</span>
+        </div>
+      </div>
+      <div class="diagram-footer" data-en="Digital · 24h SLA · Full traceability · 4 lanes" data-es="Digital · SLA 24h · Trazabilidad completa · 4 carriles">Digital · 24h SLA · Full traceability · 4 lanes</div>
+    </div>
+  </div>
+</section>
+
+<div class="section-connector"><div class="connector-line"></div><div class="connector-node"></div><div class="connector-line"></div></div>
+
+<!-- KPIs -->
+<section class="kpis" id="kpis">
+  <div class="sec-label" data-en="03 — Key Metrics" data-es="03 — Métricas Clave">03 — Key Metrics</div>
+  <h2 class="sec-title reveal" data-en="Process KPIs" data-es="KPIs del Proceso">Process KPIs</h2>
+  <p class="sec-desc reveal" data-en="30 simulated requirement requests · April–May 2026 campaign period." data-es="30 solicitudes de requerimiento simuladas · Período de campaña abril–mayo 2026.">30 simulated requirement requests · April–May 2026 campaign period.</p>
+  <div class="kpi-grid">
+    <div class="kpi-card reveal">
+      <div class="kpi-val" data-count="30">0</div>
+      <div class="kpi-lbl" data-en="Total Requests" data-es="Total Solicitudes">Total Requests</div>
+      <div class="kpi-bar"><div class="kpi-bar-fill" data-width="100"></div></div>
+    </div>
+    <div class="kpi-card reveal">
+      <div class="kpi-val" data-count="63" data-suffix="%">0%</div>
+      <div class="kpi-lbl" data-en="Approval Rate" data-es="Tasa de Aprobación">Approval Rate</div>
+      <div class="kpi-bar"><div class="kpi-bar-fill" data-width="63"></div></div>
+    </div>
+    <div class="kpi-card reveal">
+      <div class="kpi-val" data-count="23" data-suffix="h">0h</div>
+      <div class="kpi-lbl" data-en="Avg. Response Time" data-es="Tiempo Promedio">Avg. Response Time</div>
+      <div class="kpi-bar"><div class="kpi-bar-fill" data-width="48"></div></div>
+    </div>
+    <div class="kpi-card reveal">
+      <div class="kpi-val" data-count="60" data-suffix="%">0%</div>
+      <div class="kpi-lbl" data-en="SLA Compliance ≤24h" data-es="Cumplimiento SLA">SLA Compliance ≤24h</div>
+      <div class="kpi-bar"><div class="kpi-bar-fill" data-width="60"></div></div>
+    </div>
+    <div class="kpi-card reveal">
+      <div class="kpi-val" data-count="19">0</div>
+      <div class="kpi-lbl" data-en="Approved" data-es="Aprobados">Approved</div>
+      <div class="kpi-bar"><div class="kpi-bar-fill" data-width="63"></div></div>
+    </div>
+    <div class="kpi-card reveal">
+      <div class="kpi-val" data-count="11" style="color:var(--red)">0</div>
+      <div class="kpi-lbl" data-en="Rejected" data-es="Rechazados">Rejected</div>
+      <div class="kpi-bar"><div class="kpi-bar-fill" data-width="37" style="background:var(--red);opacity:0.6;"></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="section-connector"><div class="connector-line"></div><div class="connector-node"></div><div class="connector-line"></div></div>
+
+<!-- CHART -->
+<section class="chart-section" id="chart-section">
+  <div class="sec-label" data-en="04 — Data Visualization" data-es="04 — Visualización de Datos">04 — Data Visualization</div>
+  <h2 class="sec-title reveal" data-en="Interactive Dashboard" data-es="Dashboard Interactivo">Interactive Dashboard</h2>
+  <p class="sec-desc reveal" data-en="Request distribution by area and type — same data as the Power BI dashboard." data-es="Distribución de solicitudes por área y tipo — misma data que el dashboard de Power BI.">Request distribution by area and type — same data as the Power BI dashboard.</p>
+  <div class="chart-wrap reveal">
+    <div class="chart-header">
+      <span class="chart-title" id="chartLabel" data-en="Requests by Area" data-es="Solicitudes por Área">Requests by Area</span>
+      <div class="chart-tabs">
+        <button class="chart-tab active" onclick="switchChart('area',this)" data-en="By Area" data-es="Por Área">By Area</button>
+        <button class="chart-tab" onclick="switchChart('type',this)" data-en="By Type" data-es="Por Tipo">By Type</button>
+        <button class="chart-tab" onclick="switchChart('status',this)" data-en="Status" data-es="Estado">Status</button>
+      </div>
+    </div>
+    <div class="chart-body">
+      <canvas id="mainChart"></canvas>
+    </div>
+  </div>
+</section>
+
+<div class="section-connector"><div class="connector-line"></div><div class="connector-node"></div><div class="connector-line"></div></div>
+
+<!-- IMPROVEMENTS -->
+<section class="improvements" id="improvements">
+  <div class="sec-label" data-en="05 — Improvements" data-es="05 — Mejoras">05 — Improvements</div>
+  <h2 class="sec-title reveal" data-en="From AS-IS to TO-BE" data-es="Del AS-IS al TO-BE">From AS-IS to TO-BE</h2>
+  <p class="sec-desc reveal" data-en="Four concrete improvements identified through process analysis and implemented in the redesigned flow." data-es="Cuatro mejoras concretas identificadas mediante el análisis e implementadas en el flujo rediseñado.">Four concrete improvements identified through process analysis and implemented in the redesigned flow.</p>
+  <div class="imp-grid">
+    <div class="imp-card reveal">
+      <div class="imp-icon">01</div>
+      <div>
+        <h4 data-en="Digital Request Registration" data-es="Registro Digital de Solicitudes">Digital Request Registration</h4>
+        <p data-en="Every request is now logged digitally from the start, enabling full traceability and historical analysis." data-es="Cada solicitud se registra digitalmente desde el inicio, permitiendo trazabilidad completa y análisis histórico.">Every request is now logged digitally from the start, enabling full traceability and historical analysis.</p>
+      </div>
+    </div>
+    <div class="imp-card reveal">
+      <div class="imp-icon">02</div>
+      <div>
+        <h4 data-en="24-Hour Response SLA" data-es="SLA de Respuesta 24 Horas">24-Hour Response SLA</h4>
+        <p data-en="Management now has a defined maximum response window, reducing operational delays in the field." data-es="Gerencia ahora tiene una ventana máxima de respuesta definida, reduciendo las demoras operativas en campo.">Management now has a defined maximum response window, reducing operational delays in the field.</p>
+      </div>
+    </div>
+    <div class="imp-card reveal">
+      <div class="imp-icon">03</div>
+      <div>
+        <h4 data-en="Rejection Reason Tracking" data-es="Registro del Motivo de Rechazo">Rejection Reason Tracking</h4>
+        <p data-en="When rejected, the reason is recorded and communicated back to the field — enabling continuous improvement." data-es="Cuando se rechaza, el motivo se registra y se comunica al campo — habilitando la mejora continua.">When rejected, the reason is recorded and communicated back to the field — enabling continuous improvement.</p>
+      </div>
+    </div>
+    <div class="imp-card reveal">
+      <div class="imp-icon">04</div>
+      <div>
+        <h4 data-en="Automatic Logistics Notification" data-es="Notificación Automática a Logística">Automatic Logistics Notification</h4>
+        <p data-en="Upon approval, logistics receives an automatic notification — eliminating last-minute bottlenecks." data-es="Al aprobarse, logística recibe una notificación automática — eliminando cuellos de botella de último minuto.">Upon approval, logistics receives an automatic notification — eliminating last-minute bottlenecks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-connector"><div class="connector-line"></div><div class="connector-node"></div><div class="connector-line"></div></div>
+
+<!-- TOOLS -->
+<section class="tools-section" id="tools">
+  <div class="sec-label" data-en="06 — Tech Stack" data-es="06 — Herramientas">06 — Tech Stack</div>
+  <h2 class="sec-title reveal" data-en="Tools & Methodologies" data-es="Herramientas y Metodologías">Tools & Methodologies</h2>
+  <div class="tools-grid reveal">
+    <div class="tool-pill"><span class="tool-dot"></span>Bizagi Modeler</div>
+    <div class="tool-pill"><span class="tool-dot"></span>Microsoft Excel</div>
+    <div class="tool-pill"><span class="tool-dot"></span>Power BI Desktop</div>
+    <div class="tool-pill"><span class="tool-dot"></span>BPMN 2.0</div>
+    <div class="tool-pill"><span class="tool-dot"></span>Power Query</div>
+    <div class="tool-pill"><span class="tool-dot"></span>KPI Management</div>
+    <div class="tool-pill"><span class="tool-dot"></span>AS-IS / TO-BE</div>
+    <div class="tool-pill"><span class="tool-dot"></span>Continuous Improvement</div>
+    <div class="tool-pill"><span class="tool-dot"></span>SLA Definition</div>
+    <div class="tool-pill"><span class="tool-dot"></span>Process Documentation</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-name">Job Isai Pulache Carreño</div>
+    <div class="footer-role" data-en="Process & Systems Analyst · Piura, Perú" data-es="Analista de Procesos y Sistemas · Piura, Perú">Process & Systems Analyst · Piura, Perú</div>
+  </div>
+  <div class="footer-links">
+    <a href="https://jobpulachecarreno.netlify.app/" target="_blank">Portfolio</a>
+    <a href="https://github.com/JobPulacheCarreño" target="_blank">GitHub</a>
+    <a href="mailto:pulachecarrenojob@gmail.com">Email</a>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lb-close" onclick="closeLightbox()">✕</button>
+  <img id="lb-img" src="" alt="Process Diagram"/>
+</div>
+
+<!-- CHART.JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+
+</body>
+</html>
