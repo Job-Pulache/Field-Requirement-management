@@ -29,11 +29,11 @@
       <div class="lang-wrap">
         <button class="lang-btn active" onclick="setLang('en')">EN</button>
         <button class="lang-btn" onclick="setLang('es')">ES</button>
+         <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">◐</button>
       </div>
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">◐</button>
+     
     </div>
   </nav>
-
   <div class="canvas">
 
     <section class="hero flow-section">
@@ -170,6 +170,8 @@
           <div class="pool-tags">
             <span class="p-tag warn">⚠ No SLA defined</span>
             <span class="p-tag warn">⚠ No digital record</span>
+            <span class="p-tag warn">⚠ No rejection log</span>
+            <span class="p-tag warn">⚠ Not logistic alert</span>
           </div>
         </div>
 
@@ -215,6 +217,8 @@
           <div class="pool-tags">
             <span class="p-tag ok">✓ 24h SLA Enforced</span>
             <span class="p-tag ok">✓ Automated Messaging Triggers</span>
+            <span class="p-tag ok">✓ Rejection reason logged</span>
+            <span class="p-tag ok">✓ Automatic notification</span>
           </div>
         </div>
       </div>
@@ -426,7 +430,9 @@
         </div>
       </div>
     </section>
-
+<div class="flow-connector">
+      <div class="flow-connector-dot"></div>
+    </div>
     <div class="end-wrapper">
       <div class="end-node"></div>
       <div

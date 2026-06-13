@@ -82,7 +82,7 @@ nav {
 }
 .nav-brand img { height: 28px; width: auto;border-radius: 50px; margin-left:-2rem; margin-right: 0.5rem; cursor: pointer;}
 
-.nav-right { display: flex; align-items: center; gap: 1.5rem; }
+.nav-right { display: flex; align-items: center; gap: 1.5rem;margin-right: 1rem; }
 .nav-links { display: flex; gap: 1.4rem; list-style: none; }
 .nav-links a {
   font-size: 0.75rem; font-weight: 500; color: var(--ink2); text-decoration: none; letter-spacing: 0.04em;
@@ -251,3 +251,164 @@ footer { border-top: 1.5px solid var(--border); padding: 2rem; display: flex; ju
 .foot-right { display: flex; gap: 1rem; }
 .foot-right a { font-family: var(--font-mono); font-size: 0.7rem; color: var(--ink2); text-decoration: none; }
 .foot-right a:hover { color: var(--green); }
+/* ─── RESPONSIVE ENHANCEMENTS — CREATIVE PIPELINE FLOW ─── */
+/* ─── OPTIMIZACIÓN RESPONSIVE GLOBAL (MÓVIL) ─── */
+@media (max-width: 768px) {
+  /* 1. Navbar Adaptable: Distribución limpia en 3 columnas perfectas */
+  nav {
+    padding: 0 0.8rem;
+    display: grid;
+    grid-template-columns: auto 1fr auto; 
+    align-items: center;
+    gap: 0.3rem;
+  }
+  .nav-brand {
+    font-size: 0.62rem;
+    white-space: nowrap;
+  }
+  /* Contenedor de enlaces: Scroll táctil fluido si se queda sin espacio */
+  .nav-links {
+    display: flex !important;
+    gap: 0.8rem !important;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 6px 0;
+    justify-content: flex-start;
+    scrollbar-width: none; /* Oculta barra en Firefox */
+  }
+  .nav-links::-webkit-scrollbar { display: none; } /* Oculta barra en Chrome/Safari */
+  .nav-links li { list-style: none; display: inline-block; }
+  .nav-links a { font-size: 0.68rem; letter-spacing: 0.02em; }
+  
+  /* Selector de Idiomas fijado a la derecha sin romperse */
+  .lang-wrap {
+    display: flex;
+    gap: 2px;
+    flex-shrink: 0;
+  }
+  .lang-btn {
+    padding: 0.18rem 0.4rem;
+    font-size: 0.58rem;
+  }
+
+  /* 2. Ajustes de visualización en la sección de Inicio (Hero) */
+  .hero { padding: 6.5rem 1rem 3rem; min-height: auto; }
+  .hero h1 { font-size: 2.5rem; line-height: 1.05; }
+  .hero-chips {
+    gap: 0.4rem;
+    justify-content: center;
+    max-width: 320px;
+    margin: 1.6rem auto 0;
+  }
+  .chip { padding: 0.25rem 0.6rem; font-size: 0.58rem; }
+
+  /* 3. Flujo Secuencial Técnico de Problemas (Pipeline Ámbar) */
+  .problem-nodes {
+    grid-template-columns: 1fr;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    overflow: visible;
+    position: relative;
+    padding-left: 28px;
+    gap: 1.8rem;
+  }
+  .problem-nodes::before {
+    content: ''; position: absolute;
+    top: 0; left: 8px; bottom: 40px; width: 2px;
+    border-left: 2px dashed var(--amber);
+    z-index: 1;
+  }
+  .pnode {
+    border: 1.5px solid var(--border) !important;
+    border-radius: 8px;
+    background: var(--white);
+    box-shadow: 0 4px 16px var(--shadow);
+    padding: 1.2rem;
+    position: relative;
+    z-index: 2;
+  }
+  .pnode::after {
+    content: ''; position: absolute;
+    top: 22px; left: -24px; width: 10px; height: 10px;
+    border-radius: 50%; background: var(--amber);
+    border: 2px solid var(--bg);
+    box-shadow: 0 0 0 4px rgba(184, 92, 0, 0.15);
+    animation: alert-pulse 2s infinite;
+  }
+
+  /* 4. Estructura de Mejoras en Tubería (Pipeline Verde) */
+  .imp-grid {
+    grid-template-columns: 1fr;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    overflow: visible;
+    position: relative;
+    padding-left: 28px;
+    gap: 1.8rem;
+  }
+  .imp-grid::before {
+    content: ''; position: absolute;
+    top: 0; left: 8px; bottom: 40px; width: 2px;
+    border-left: 2px dashed var(--green);
+    z-index: 1;
+  }
+  .imp-card {
+    border: 1.5px solid var(--border) !important;
+    border-radius: 8px;
+    background: var(--white);
+    box-shadow: 0 4px 16px var(--shadow);
+    padding: 1.2rem;
+    position: relative;
+    z-index: 2;
+  }
+  .imp-card::after {
+    content: ''; position: absolute;
+    top: 24px; left: -24px; width: 10px; height: 10px;
+    border-radius: 50%; background: var(--green);
+    border: 2px solid var(--bg2);
+    box-shadow: 0 0 0 4px rgba(26, 107, 60, 0.15);
+    animation: success-pulse 2s infinite;
+  }
+
+  /* 5. Comparativa de Modelos BPMN */
+  .bpmn-compare { grid-template-columns: 1fr; gap: 1.5rem; }
+  .pool { display: block; overflow-x: auto; white-space: nowrap; }
+
+  /* 6. Rediseño Adaptable de la Cuadrícula de KPIs */
+  .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+  .kpi-cell { padding: 1.5rem 1rem; border-right: 1px solid rgba(255,255,255,0.06); }
+  .kpi-cell:nth-child(2n) { border-right: none; }
+}
+
+/* Animaciones de ondas de pulso analíticas */
+@keyframes alert-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(184, 92, 0, 0.6); }
+  70% { box-shadow: 0 0 0 8px rgba(184, 92, 0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(184, 92, 0, 0); }
+}
+@keyframes success-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(26, 107, 60, 0.6); }
+  70% { box-shadow: 0 0 0 8px rgba(26, 107, 60, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(26, 107, 60, 0); }
+}
+
+/* Animaciones de Pulso de estado */
+@keyframes alert-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(184, 92, 0, 0.6); }
+  70% { box-shadow: 0 0 0 8px rgba(184, 92, 0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(184, 92, 0, 0); }
+}
+@keyframes success-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(26, 107, 60, 0.6); }
+  70% { box-shadow: 0 0 0 8px rgba(26, 107, 60, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(26, 107, 60, 0); }
+}
+
+/* Animación de pulso técnico para los conectores de error */
+@keyframes alert-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(184, 92, 0, 0.5); }
+  70% { box-shadow: 0 0 0 6px rgba(184, 92, 0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(184, 92, 0, 0); }
+}
